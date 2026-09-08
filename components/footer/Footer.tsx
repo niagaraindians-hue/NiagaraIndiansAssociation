@@ -34,7 +34,7 @@ const resourceLinks = [
   },
   {
     title: "Business Directory",
-    href: "https://app.niagaraindians.com/",
+    href: "https://directory.niagaraindians.com",
     external: true,
   },
   {

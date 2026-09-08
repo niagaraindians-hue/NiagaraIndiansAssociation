@@ -22,7 +22,7 @@ import { motion } from "framer-motion";
 const MEMBERSHIP_URL =
   "https://www.zeffy.com/en-CA/ticketing/niagara-indian-associations-memberships";
 
-const COMMUNITY_PORTAL_URL = "https://app.niagaraindians.com/";
+const COMMUNITY_PORTAL_URL = "https://directory.niagaraindians.com";
 
 const benefits = [
   {

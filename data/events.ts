@@ -1,6 +1,31 @@
 import type { EventItem } from "@/types/events";
 
 export const events: EventItem[] = [
+  {
+    id: "nia-yoga-session-2026",
+    title: "Free Yoga Session for NIA Members",
+    date: "2026-09-12",
+    dateLabel: "September 12, 2026",
+    time: "10:00 AM",
+    location: "Niagara Falls",
+    address: "Venue will be announced soon",
+    description:
+      "Niagara Indian Association invites all NIA members to a free yoga session on September 12 at 10:00 AM in Niagara Falls. Breathe, stretch, relax and rejuvenate while connecting with fellow members. The venue will be announced soon.",
+    image: "/images/events/yoga-session-2026.jpeg",
+    status: "upcoming",
+    featured: true,
+    activities: [
+      {
+        number: "01",
+        title: "Yoga Session",
+        time: "10:00 AM",
+        location: "Niagara Falls",
+        address: "Venue will be announced soon",
+        description:
+          "A free session for NIA members to breathe, stretch, relax and rejuvenate together. Take time for your well-being and build connections with the NIA community.",
+      },
+    ],
+  },
   // ============================================================
   // PAST EVENT
   // ============================================================
@@ -94,7 +119,7 @@ export const events: EventItem[] = [
 
     status: "upcoming",
 
-    featured: true,
+    featured: false,
 
     activities: [
       {

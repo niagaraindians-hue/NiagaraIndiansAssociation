@@ -124,7 +124,7 @@ Preserve these exact spellings when supplying files. Provide these assets separa
 - **Newsletter:** displays a local success state only; it does not store email addresses or subscribe users to a mailing list.
 - **Chat assistant:** uses predefined browser-side responses; it does not call an AI service or persist conversations.
 - **Membership:** registration links lead to Zeffy; payment processing is external.
-- **Community portal:** links to `https://app.niagaraindians.com/`, which is maintained separately.
+- **Community portal:** links to `https://directory.niagaraindians.com`, which is maintained separately.
 
 ## Production deployment
 

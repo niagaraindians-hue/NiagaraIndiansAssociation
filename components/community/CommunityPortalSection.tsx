@@ -131,7 +131,7 @@ export default function CommunityPortalSection() {
 
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a
-                href="https://app.niagaraindians.com/"
+                href="https://directory.niagaraindians.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange-400 px-6 py-3.5 text-sm font-extrabold text-[#07182f] shadow-[0_14px_38px_rgba(242,140,40,0.22)] transition duration-300 hover:-translate-y-1 hover:bg-orange-300"
@@ -226,7 +226,7 @@ export default function CommunityPortalSection() {
             return (
               <motion.a
                 key={feature.title}
-                href="https://app.niagaraindians.com/"
+                href="https://directory.niagaraindians.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={reveal}
