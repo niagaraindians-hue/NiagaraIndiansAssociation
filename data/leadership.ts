@@ -25,16 +25,18 @@ export const executiveLeadership: LeadershipProfile[] = [
         "My goal is to bring people together through culture, service, business collaboration, and shared pride. Together, we can build a stronger, more connected Niagara that supports every family, every generation, and our growing Indian community.",
     },
   },
-  {
-    name: "Prashanth Unnithan",
-    role: "President",
-    category: "Executive Leadership",
-    image: "/images/board/prashanth-unnithan.jpeg",
-    profile: {
-      introduction:
-        "Prashanth Unnithan is an accomplished entrepreneur, construction professional, REALTOR® and Senior Financial Advisor with broad experience across business and community leadership. His professional journey spans construction, real estate, financial advisory, building supplies, procurement, logistics and international trade. Through his businesses, he has developed strong capabilities in business development, operations, strategic relationships and identifying opportunities for growth. His academic background includes an MBA along with studies in export management, international business, business management and commerce.\n\nHis ability to work across diverse industries gives him a practical and well-rounded perspective on business and community development. As President of NIA, Prashanth brings entrepreneurial thinking, professional experience and a strong focus on building partnerships and opportunities that can strengthen the Indian community across Niagara.",
-    },
+{
+  name: "Prashanth Unnithan",
+  role: "President",
+  category: "Executive Leadership",
+  image: "/images/board/prashanth-unnithan-v2.jpeg",
+  profile: {
+    introduction:
+      "Prashanth Unnithan is an accomplished entrepreneur, construction professional, REALTOR® and Senior Financial Advisor with broad experience across business and community leadership. His professional journey spans construction, real estate, financial advisory, building supplies, procurement, logistics and international trade. Through his businesses, he has developed strong capabilities in business development, operations, strategic relationships and identifying opportunities for growth. His academic background includes an MBA along with studies in export management, international business, business management and commerce.\n\nHis ability to work across diverse industries gives him a practical and well-rounded perspective on business and community development. As President of NIA, Prashanth brings entrepreneurial thinking, professional experience and a strong focus on building partnerships and opportunities that can strengthen the Indian community across Niagara.",
+    quote:
+      "Together, we can strengthen our community by creating meaningful connections, supporting one another, and building opportunities that help the Indian community across Niagara grow and thrive.",
   },
+},
   {
     name: "Parth Patel",
     role: "Vice President",
