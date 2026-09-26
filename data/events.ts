@@ -12,7 +12,7 @@ export const events: EventItem[] = [
     description:
       "Niagara Indian Association invites all NIA members to a free yoga session on September 12 at 10:00 AM in Niagara Falls. Breathe, stretch, relax and rejuvenate while connecting with fellow members. The venue will be announced soon.",
     image: "/images/events/yoga-session-2026.jpeg",
-    status: "upcoming",
+    status: "past",
     featured: true,
     activities: [
       {
