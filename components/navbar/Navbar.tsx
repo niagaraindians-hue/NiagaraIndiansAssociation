@@ -11,6 +11,7 @@ const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Membership", href: "/membership" },
+  { label: "Business Registration", href: "/business-registration" },
   { label: "Events", href: "/events" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
@@ -126,7 +127,7 @@ export default function Navbar() {
           {/* =====================================================
               DESKTOP NAVIGATION
           ===================================================== */}
-          <nav className="hidden items-center gap-1 lg:flex xl:gap-2">
+          <nav className="hidden items-center gap-2 xl:flex">
             {links.map((link) => {
               const active =
                 link.href === "/"
@@ -189,7 +190,7 @@ export default function Navbar() {
                     scale: 0.97,
                   }
             }
-            className="group hidden items-center gap-2 rounded-full bg-orange-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-orange-500/20 transition-colors duration-200 hover:bg-orange-600 lg:inline-flex"
+            className="group hidden items-center gap-2 rounded-full bg-orange-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-orange-500/20 transition-colors duration-200 hover:bg-orange-600 xl:inline-flex"
           >
             <span>Become a Member</span>
 
@@ -214,7 +215,7 @@ export default function Navbar() {
                     scale: 0.92,
                   }
             }
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#0b294b] shadow-sm transition hover:border-orange-300 hover:bg-orange-50 lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#0b294b] shadow-sm transition hover:border-orange-300 hover:bg-orange-50 xl:hidden"
           >
             <AnimatePresence mode="wait" initial={false}>
               {mobileOpen ? (
@@ -327,7 +328,7 @@ export default function Navbar() {
               duration: 0.22,
               ease: "easeOut",
             }}
-            className="absolute left-0 right-0 top-[76px] z-[9998] border-t border-slate-200 bg-white shadow-2xl sm:top-[82px] lg:hidden"
+            className="absolute left-0 right-0 top-[76px] z-[9998] max-h-[calc(100dvh-76px)] overflow-y-auto border-t border-slate-200 bg-white shadow-2xl sm:top-[82px] sm:max-h-[calc(100dvh-82px)] xl:hidden"
           >
             <nav className="mx-auto w-full max-w-7xl px-5 py-4 sm:px-8">
               <div className="flex flex-col">

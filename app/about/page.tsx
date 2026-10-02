@@ -110,7 +110,7 @@ export default function AboutPage() {
         />
 
         {/* Desktop editorial composition */}
-        <div className="relative mx-auto h-[560px] max-w-[1600px] lg:h-[610px]">
+        <div className="relative mx-auto max-w-[1600px] lg:h-[610px]">
           {/* LEFT CONTENT */}
           <motion.div
             initial={shouldReduceMotion ? false : { opacity: 0, x: -22 }}
@@ -217,7 +217,7 @@ export default function AboutPage() {
                 }}
               >
                 <Image
-                  src="/images/about/inaugration.jpg"
+                  src="/images/about/Inaugration.jpg"
                   alt="Niagara Indian Association community gathered together"
                   fill
                   priority
@@ -254,7 +254,7 @@ export default function AboutPage() {
             className="relative mx-6 mb-12 h-[300px] overflow-hidden rounded-[36px] border-[7px] border-[#102a43] bg-[#102a43] shadow-[0_25px_60px_rgba(15,42,67,0.16)] lg:hidden sm:mx-10 sm:h-[380px]"
           >
             <Image
-              src="/images/about/_R4A0164.jpg"
+              src="/images/about/Inaugration.jpg"
               alt="Niagara Indian Association community gathered together"
               fill
               sizes="100vw"

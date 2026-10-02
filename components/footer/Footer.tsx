@@ -22,6 +22,7 @@ const quickLinks = [
   { title: "About Us", href: "/about" },
   { title: "Events", href: "/events" },
   { title: "Membership", href: "/membership" },
+  { title: "Business Registration", href: "/business-registration" },
   { title: "Gallery", href: "/gallery" },
   { title: "Contact Us", href: "/contact" },
 ];
