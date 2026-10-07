@@ -286,11 +286,15 @@ ${message}
     if (error) {
       console.error("Resend error:", error);
 
+      const message = String(error.message || "");
+      const isSandboxOrDomainIssue =
+        /testing emails|verify.*domain|domain.*verified|sandbox/i.test(message);
+
       return Response.json(
         {
-          error:
-            error.message ||
-            "Unable to send your message right now.",
+          error: isSandboxOrDomainIssue
+            ? "Resend is rejecting the sender address. Verify the niagaraindians.com domain in Resend, or switch the sender to a verified address before testing the form again."
+            : message || "Unable to send your message right now.",
         },
         { status: 500 }
       );

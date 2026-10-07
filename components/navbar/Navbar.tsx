@@ -53,10 +53,6 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
   const closeMobileMenu = () => {
     setMobileOpen(false);
   };
