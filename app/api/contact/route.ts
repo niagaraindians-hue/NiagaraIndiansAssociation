@@ -6,7 +6,7 @@ const CONTACT_EMAIL =
   process.env.CONTACT_TO_EMAIL || "info@niagaraindians.com";
 
 const FROM_EMAIL =
-  process.env.CONTACT_FROM_EMAIL ||
+  process.env.CONTACT_FROM_EMAIL?.trim() ||
   "NIA Website <onboarding@resend.dev>";
 
 export async function POST(request: Request) {
