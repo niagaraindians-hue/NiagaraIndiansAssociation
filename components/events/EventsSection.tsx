@@ -10,6 +10,10 @@ import {
 } from "lucide-react";
 
 import { events } from "@/data/events";
+import {
+  EventSlideshowControls,
+  useEventSlideshow,
+} from "@/components/events/EventSlideshowControls";
 
 export default function EventsSection() {
   /*
@@ -33,9 +37,14 @@ export default function EventsSection() {
    * Prefer the explicitly featured UPCOMING event.
    * If there isn't one, automatically use the next upcoming event.
    */
-  const featuredEvent =
-    upcomingEvents.find((event) => event.featured === true) ??
-    upcomingEvents[0];
+  const featuredEventIndex = upcomingEvents.findIndex(
+    (event) => event.featured === true,
+  );
+  const slideshow = useEventSlideshow(
+    upcomingEvents.length,
+    featuredEventIndex >= 0 ? featuredEventIndex : 0,
+  );
+  const featuredEvent = upcomingEvents[slideshow.activeIndex];
 
   /*
    * No upcoming events
@@ -89,7 +98,7 @@ export default function EventsSection() {
               <span className="h-px w-7 shrink-0 bg-orange-500" />
 
               <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-orange-500 sm:text-[10px]">
-                Upcoming Event
+                {upcomingEvents.length > 1 ? "Upcoming Events" : "Upcoming Event"}
               </span>
 
               <span className="h-px w-7 shrink-0 bg-green-600" />
@@ -121,7 +130,23 @@ export default function EventsSection() {
             FEATURED EVENT
         ===================================================== */}
 
-        <div className="mt-8 w-full overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-xl lg:mt-10">
+        <div
+          className="mt-8 lg:mt-10"
+          onMouseEnter={() => slideshow.setInteractionPaused(true)}
+          onMouseLeave={() => slideshow.setInteractionPaused(false)}
+          onFocusCapture={() => slideshow.setInteractionPaused(true)}
+          onBlurCapture={(event) => {
+            if (
+              !(
+                event.relatedTarget instanceof Node &&
+                event.currentTarget.contains(event.relatedTarget)
+              )
+            ) {
+              slideshow.setInteractionPaused(false);
+            }
+          }}
+        >
+        <div className="w-full overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-xl">
 
           <div className="flex w-full flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr]">
 
@@ -358,7 +383,15 @@ export default function EventsSection() {
 
           </div>
 
-        </div>
+          </div>
+          <EventSlideshowControls
+            eventCount={upcomingEvents.length}
+            activeIndex={slideshow.activeIndex}
+            onSelect={slideshow.selectEvent}
+            isPaused={slideshow.isPaused}
+            onTogglePaused={slideshow.togglePaused}
+          />
+          </div>
 
       </div>
     </section>

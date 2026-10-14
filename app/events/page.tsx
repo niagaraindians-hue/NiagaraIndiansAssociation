@@ -12,6 +12,10 @@ import {
 import { motion, useReducedMotion } from "framer-motion";
 
 import { events } from "@/data/events";
+import {
+  EventSlideshowControls,
+  useEventSlideshow,
+} from "@/components/events/EventSlideshowControls";
 
 export default function EventsPage() {
   const shouldReduceMotion = useReducedMotion();
@@ -49,9 +53,14 @@ export default function EventsPage() {
    * Featured upcoming event
    */
 
-  const featuredEvent =
-    upcomingEvents.find((event) => event.featured === true) ||
-    upcomingEvents[0];
+  const featuredEventIndex = upcomingEvents.findIndex(
+    (event) => event.featured === true,
+  );
+  const slideshow = useEventSlideshow(
+    upcomingEvents.length,
+    featuredEventIndex >= 0 ? featuredEventIndex : 0,
+  );
+  const featuredEvent = upcomingEvents[slideshow.activeIndex];
 
   return (
     <main className="min-h-screen overflow-x-clip bg-[#fffdf8] text-[#0B1F3A]">
@@ -172,6 +181,21 @@ export default function EventsPage() {
             {/* FEATURED EVENT */}
 
             {featuredEvent && (
+              <div
+                onMouseEnter={() => slideshow.setInteractionPaused(true)}
+                onMouseLeave={() => slideshow.setInteractionPaused(false)}
+                onFocusCapture={() => slideshow.setInteractionPaused(true)}
+                onBlurCapture={(event) => {
+                  if (
+                    !(
+                      event.relatedTarget instanceof Node &&
+                      event.currentTarget.contains(event.relatedTarget)
+                    )
+                  ) {
+                    slideshow.setInteractionPaused(false);
+                  }
+                }}
+              >
               <div className="overflow-hidden rounded-[30px] border border-slate-200/80 bg-white shadow-[0_24px_70px_rgba(11,31,58,0.12)]">
 
                 <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
@@ -295,6 +319,14 @@ export default function EventsPage() {
 
                 </div>
 
+              </div>
+              <EventSlideshowControls
+                eventCount={upcomingEvents.length}
+                activeIndex={slideshow.activeIndex}
+                onSelect={slideshow.selectEvent}
+                isPaused={slideshow.isPaused}
+                onTogglePaused={slideshow.togglePaused}
+              />
               </div>
             )}
 

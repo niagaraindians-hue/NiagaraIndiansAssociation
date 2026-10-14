@@ -100,6 +100,20 @@ export const events: EventItem[] = [
   // UPCOMING EVENT
   // ============================================================
   {
+    id: "nia-festival-bazaar-2026",
+    title: "NIA Festival Bazaar",
+    date: "2026-11-06",
+    dateLabel: "November 6, 2026",
+    time: "Time to be announced",
+    location: "Niagara Region",
+    address: "Venue to be announced soon",
+    description:
+      "Join the Niagara Indian Association for a Diwali marketplace in the Niagara Region, featuring food stalls, jewellery and accessories, Diwali gifts, and home décor. For vendor stall bookings and enquiries, contact the NIA committee at 905-347-4347 or info@niagaraindians.com.",
+    image: "/images/events/NIA vendor.jpeg",
+    status: "upcoming",
+    featured: true,
+  },
+  {
     id: "nia-consular-camp-2026",
 
     title: "Consular Camp",
@@ -115,7 +129,7 @@ export const events: EventItem[] = [
     description:
       "The Niagara Indian Association is hosting a Consular Camp to provide life certificate services to Indian and Indo-Canadian pensioners and consultations on various consular matters.",
 
-    image: "/images/events/consular-camp-2026.png",
+    image: "/images/events/WhatsApp Image 2026-09-02 at 3.19.39 PM.jpeg",
 
     status: "upcoming",
 
