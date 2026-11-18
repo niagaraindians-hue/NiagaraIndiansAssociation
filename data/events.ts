@@ -100,16 +100,16 @@ export const events: EventItem[] = [
   // UPCOMING EVENT
   // ============================================================
   {
-    id: "nia-festival-bazaar-2026",
-    title: "NIA Festival Bazaar",
-    date: "2026-11-06",
-    dateLabel: "November 6, 2026",
+    id: "nia-new-year-celebration-2027",
+    title: "Niagara's Most Elegant New Year Celebration",
+    date: "2027-01-02",
+    dateLabel: "January 2, 2027",
     time: "Time to be announced",
     location: "Niagara Region",
-    address: "Venue to be announced soon",
+    address: "Venue to be announced",
     description:
-      "Join the Niagara Indian Association for a Diwali marketplace in the Niagara Region, featuring food stalls, jewellery and accessories, Diwali gifts, and home décor. For vendor stall bookings and enquiries, contact the NIA committee at 905-347-4347 or info@niagaraindians.com.",
-    image: "/images/events/NIA vendor.jpeg",
+      "Step into the New Year in grand style at an evening to remember, presented by the Niagara Indian Association. Venue and ticket details coming soon.",
+    image: "/images/events/NewYearNight.jpeg",
     status: "upcoming",
     featured: true,
   },
